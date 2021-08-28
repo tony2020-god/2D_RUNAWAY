@@ -8,6 +8,8 @@ TagManager:
   - "\u7D42\u9EDE"
   - "\u8B66\u5BDF"
   - "\u640D\u6BC0\u9EDE"
+  - up
+  - down
   layers:
   - Default
   - TransparentFX

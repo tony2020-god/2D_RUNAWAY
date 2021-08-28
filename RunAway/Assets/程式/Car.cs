@@ -44,8 +44,8 @@ public class Car : MonoBehaviour
     {
             if (stop == false)
             {
-              if(gameObject.layer== LayerMask.NameToLayer("up"))   transform.Translate(0, speed * Time.deltaTime, 0, Space.World);
-              if (gameObject.layer == LayerMask.NameToLayer("down")) transform.Translate(0, -speed * Time.deltaTime, 0, Space.World);
+              if(gameObject.tag == "up")   transform.Translate(0, speed * Time.deltaTime, 0, Space.World);
+              if (gameObject.tag == "down") transform.Translate(0, -speed * Time.deltaTime, 0, Space.World);
             }
     }
 }
