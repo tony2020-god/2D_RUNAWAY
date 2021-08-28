@@ -17,10 +17,12 @@ public class Player : MonoBehaviour
         //aud = GetComponent<AudioSource>();
     }
     public void Move()
-    {
+    {    
         //水平浮點數 = 輸入 的 取得軸向("水平")-左右AD Vertical
         float h = Input.GetAxis("Horizontal");
+        print("h"+h);
         float V = Input.GetAxis("Vertical");
+        print("h" + V);
         //剛體 的 加速度 = 新 二維向量(水平浮點數 * 速度, 剛體的加速度Y)
         rig.velocity = new Vector2(h * speed, V * speed);
         //動畫的設定布林值(參數名稱，水平 不等於零時勾選)
@@ -53,8 +55,11 @@ public class Player : MonoBehaviour
     {
         if (other.gameObject.tag == "終點")//碰到怪物物件玩家
         {
-            GM.win = true;
-            GM.Win();
+            if(GM.lose == false)
+            {
+                GM.win = true;
+                GM.Win();
+            }
         }
     }
 }

@@ -53,6 +53,10 @@ MonoBehaviour:
         type: 3}
       x: -3.43
       y: -5.82
+    - monster: {fileID: 4146271505249987197, guid: 39996a6326a1f254a80d606b66fb67d5,
+        type: 3}
+      x: 5.32
+      y: 5.53
   - name: "\u7B2C\u4E94\u6CE2"
     time: 0.5
     monsters:
@@ -65,7 +69,7 @@ MonoBehaviour:
       x: -3.43
       y: -5.82
   - name: "\u7B2C\u516D\u6CE2"
-    time: 3
+    time: 2
     monsters:
     - monster: {fileID: 4146271505249987197, guid: 39996a6326a1f254a80d606b66fb67d5,
         type: 3}

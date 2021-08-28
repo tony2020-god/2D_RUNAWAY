@@ -29,7 +29,7 @@ public class PoliceSpawnManager : MonoBehaviour
             for (int j = 0; j < data.spawn[i].monsters.Length; j++)
             {
                 Vector3 pos = new Vector3(data.spawn[i].monsters[j].x, data.spawn[i].monsters[j].y, 0); //座標
-                GameObject temp = Instantiate(data.spawn[i].monsters[j].monster, pos, data.spawn[i].monsters[j].monster.transform.rotation); //生成          
+                GameObject temp = Instantiate(data.spawn[i].monsters[j].monster, pos, data.spawn[i].monsters[j].monster.transform.rotation); //生成
             }
         }
     }

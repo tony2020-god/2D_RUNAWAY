@@ -11,7 +11,7 @@ public class Car : MonoBehaviour
     public bool stop;
     public void Start()
     {
-        speed = 3;
+        speed = 4;
         rig = GetComponent<Rigidbody2D>();
         ani = GetComponent<Animator>();
         GM = GameObject.Find("遊戲管理器").GetComponent<Gamemanerger>();
@@ -21,7 +21,7 @@ public class Car : MonoBehaviour
     {
         if (other.gameObject.tag == "玩家")//碰到怪物物件玩家
         {
-            if(GM.lose == false)
+            if (GM.lose == false)
             {
                 aud.PlayOneShot(crash, 1);
                 stop = true;
@@ -29,17 +29,12 @@ public class Car : MonoBehaviour
                 GM.Lose();
             }
         }
-        else if (other.gameObject.tag == "警察")
-        {
-            stop = true;
-        }
+        else if (other.gameObject.tag == "警察") stop = true;
+        else if (other.gameObject.tag == "損毀點") Destroy(gameObject);
     }
     private void OnCollisionExit2D(Collision2D other)
     {
-        if (other.gameObject.tag == "警察")
-        {
-            stop = false;
-        }
+        if (other.gameObject.tag == "警察") stop = false;
     }
     public void Update()
     {

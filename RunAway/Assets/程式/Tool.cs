@@ -4,7 +4,7 @@ public class Tool : MonoBehaviour
 {
     public GameObject Target;
     [Header("滑入顏色覆蓋")]
-    public Color colorMouseEnter = new Color(207 / 255f, 87 / 255f, 93 / 255f);
+    public Color colorMouseEnter = new Color(108 / 2295f, 79 / 255f, 255 / 255f);
     public SpriteRenderer spr;
     public GameObject AI;
     public Gamemanerger GM;
@@ -20,27 +20,14 @@ public class Tool : MonoBehaviour
         transform.position = new Vector3(Target.transform.position.x,Target.transform.position.y,Target.transform.position.z);
     }
 
-    /// <summary>
-    /// 滑鼠滑入的效果
-    /// </summary>
-    public void MouseEnterEffect()
-    {
-        spr.color = colorMouseEnter;
-    }
-    /// <summary>
-    /// 滑鼠滑出的效果
-    /// </summary>
-    public void MouseExitEffect()
-    {
-        spr.color = Color.white;
-    }
+
     public void OnMouseEnter()
     {
-        if (GM.StartGame) MouseEnterEffect();
+        if (GM.StartGame) spr.color = colorMouseEnter;
     }
     public void OnMouseExit()
     {
-        MouseExitEffect();
+        spr.color = Color.white;
     }
     public void OnMouseDown()
     {
